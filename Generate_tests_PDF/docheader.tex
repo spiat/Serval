@@ -1,0 +1,83 @@
+\documentclass[oneside]{book}
+\pagestyle{plain}
+
+\usepackage{url}
+\usepackage{array}
+\usepackage{framed}
+\usepackage{latexsym}
+\title{Testing manual for the Serval Project}
+\author{Solveig PIAT}
+\date{9, April 2016}
+
+\begin{document}
+\maketitle
+\setcounter{tocdepth}{1}
+\tableofcontents
+\newpage
+
+\mainmatter
+\part{General presentation}
+
+\chapter{Objectives}
+The goals of the testing is to be able to validate the different functionalities of the Serval App and Serval captive portal. It will then lead to new ideas to improve what already exists.
+\chapter{General approach}
+To obtain this document, a few user stories have been chosen. With these, it has been possible to find use cases leading to tests to realise. 
+List of user stories 
+
+For the general testing, 
+there are several things to do :
+
+- Be sure that the ME are not rebooting, have sufficient battery, are emitting in a stable way. There must be available ressources to communicate with the Serval device and the devices must have sufficient battery life. 
+- The names should not be ambiguous and only one test should be made at a time.
+- The spots where the ME will be put should be defined beforehand. 
+\section{Categories}
+All the tests have been put into different categories, depending on the main functionality being tested. 
+Four categories exist :
+\begin{enumerate}
+\item T1 : testing different scenarii, taking into account the landscape; 
+\item T2 : testing the functionalities on different device platforms (e.g. Android, iOS, MacOS, Windows, etc.);
+\item T3 : testing the connectivity, taking into account Wi-Fi range;
+\item T4 : considering improvements.
+\end{enumerate}
+
+\section{Compatibility with norms}
+To realise all the following tests, you should be sure that every device you use respects the 802.1 norms and other communication norms. 
+\section{How to add tests ?}
+If you want to add tests to the document, you will need to be able to compile LaTeX. 
+\newline
+The following scripts will allow you to obtain an update of this very document after having added or modified tests. Make sure that you are in the directory that contains the CSV file and the input tex files. You need to have Python and LaTeX.
+
+\paragraph{Windows: }
+\verb|python automation_script.py| 
+\newline
+\verb|latex tests_sheets.tex|
+\newline
+\verb|latex tests_sheets.tex|
+\newline
+\verb|pdflatex tests_sheets.tex|
+\newline
+\verb|del *.aux|
+\newline
+\verb|del *.dvi|
+\newline
+\verb|del *.toc|
+\newline
+\verb|del *.log|
+\paragraph{Unix: }
+\verb|#!/bin/bash|
+\newline
+\verb|python automation_script.py| 
+\newline
+\verb|latex tests_sheets.tex|
+\newline
+\verb|latex tests_sheets.tex|
+\newline
+\verb|pdflatex tests_sheets.tex|
+\newline
+\verb|rm *.aux|
+\newline
+\verb|rm *.dvi|
+\newline
+\verb|rm *.toc|
+\newline
+\verb|rm *.log|

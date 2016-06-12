@@ -1,0 +1,9 @@
+#!/bin/bash
+python automation_script.py
+latex tests_sheets.tex
+latex tests_sheets.tex
+pdflatex tests_sheets.tex
+rm *.aux
+rm *.dvi
+rm *.toc
+rm *.log

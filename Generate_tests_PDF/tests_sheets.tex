@@ -1,0 +1,5611 @@
+\documentclass[oneside]{book}
+\pagestyle{plain}
+
+\usepackage{url}
+\usepackage{array}
+\usepackage{framed}
+\usepackage{latexsym}
+\title{Testing manual for the Serval Project}
+\author{Solveig PIAT}
+\date{9, April 2016}
+
+\begin{document}
+\maketitle
+\setcounter{tocdepth}{1}
+\tableofcontents
+\newpage
+
+\mainmatter
+\part{General presentation}
+
+\chapter{Objectives}
+The goals of the testing is to be able to validate the different functionalities of the Serval App and Serval captive portal. It will then lead to new ideas to improve what already exists.
+\chapter{General approach}
+To obtain this document, a few user stories have been chosen. With these, it has been possible to find use cases leading to tests to realise. 
+List of user stories 
+
+For the general testing, 
+there are several things to do :
+
+- Be sure that the ME are not rebooting, have sufficient battery, are emitting in a stable way. There must be available ressources to communicate with the Serval device and the devices must have sufficient battery life. 
+- The names should not be ambiguous and only one test should be made at a time.
+- The spots where the ME will be put should be defined beforehand. 
+\section{Categories}
+All the tests have been put into different categories, depending on the main functionality being tested. 
+Four categories exist :
+\begin{enumerate}
+\item T1 : testing different scenarii, taking into account the landscape; 
+\item T2 : testing the functionalities on different device platforms (e.g. Android, iOS, MacOS, Windows, etc.);
+\item T3 : testing the connectivity, taking into account Wi-Fi range;
+\item T4 : considering improvements.
+\end{enumerate}
+
+\section{Compatibility with norms}
+To realise all the following tests, you should be sure that every device you use respects the 802.1 norms and other communication norms. 
+\section{How to add tests ?}
+If you want to add tests to the document, you will need to be able to compile LaTeX. 
+\newline
+The following scripts will allow you to obtain an update of this very document after having added or modified tests. Make sure that you are in the directory that contains the CSV file and the input tex files. You need to have Python and LaTeX.
+
+\paragraph{Windows: }
+\verb|python automation_script.py| 
+\newline
+\verb|latex tests_sheets.tex|
+\newline
+\verb|latex tests_sheets.tex|
+\newline
+\verb|pdflatex tests_sheets.tex|
+\newline
+\verb|del *.aux|
+\newline
+\verb|del *.dvi|
+\newline
+\verb|del *.toc|
+\newline
+\verb|del *.log|
+\paragraph{Unix: }
+\verb|#!/bin/bash|
+\newline
+\verb|python automation_script.py| 
+\newline
+\verb|latex tests_sheets.tex|
+\newline
+\verb|latex tests_sheets.tex|
+\newline
+\verb|pdflatex tests_sheets.tex|
+\newline
+\verb|rm *.aux|
+\newline
+\verb|rm *.dvi|
+\newline
+\verb|rm *.toc|
+\newline
+\verb|rm *.log|
+\chapter{Category 1}
+\section{Test ID : T1-A1a-E1-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A1a-E1-M1-D1y
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with no particular specifics, in A clear and flat place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in A clear and flat place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A1a-E2-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A1a-E2-M1-D1y
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with no particular specifics, in A clear and hilly place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in A clear and hilly place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A1a-E3-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A1a-E3-M1-D1y
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with no particular specifics, in the city - in a flat place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in the city - in a flat place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A1a-E4-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A1a-E4-M1-D1y
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with no particular specifics, in the city - in a hilly place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in the city - in a hilly place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A1b-E1-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A1b-E1-M1-D1y
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with no particular specifics, in A clear and flat place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in A clear and flat place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A1b-E2-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A1b-E2-M1-D1y
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with no particular specifics, in A clear and hilly place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in A clear and hilly place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A1b-E3-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A1b-E3-M1-D1y
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with no particular specifics, in the city - in a flat place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in the city - in a flat place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A1b-E4-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A1b-E4-M1-D1y
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with no particular specifics, in the city - in a hilly place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in the city - in a hilly place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A1c-E1-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A1c-E1-M1-D1y
+ This test aims at testing the sending an update functions of the Serval Software, using 2 Android smartphones with no particular specifics, in A clear and flat place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in A clear and flat place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A1c-E2-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A1c-E2-M1-D1y
+ This test aims at testing the sending an update functions of the Serval Software, using 2 Android smartphones with no particular specifics, in A clear and hilly place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in A clear and hilly place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A1c-E3-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A1c-E3-M1-D1y
+ This test aims at testing the sending an update functions of the Serval Software, using 2 Android smartphones with no particular specifics, in the city - in a flat place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in the city - in a flat place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A1c-E4-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A1c-E4-M1-D1y
+ This test aims at testing the sending an update functions of the Serval Software, using 2 Android smartphones with no particular specifics, in the city - in a hilly place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in the city - in a hilly place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A2-E1-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A2-E1-M1-D1y
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with no particular specifics, in A clear and flat place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in A clear and flat place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A2-E1-M1-Dn}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A2-E1-M1-Dn
+ This test aims at testing the asking for help functions of the Serval Software, using 1 Android smartphone with no particular specifics, in A clear and hilly place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in A clear and hilly place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 1 Android smartphone.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A2-E2-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A2-E2-M1-D1y
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with no particular specifics, in the city - in a flat place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in the city - in a flat place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A2-E2-M1-Dn}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A2-E2-M1-Dn
+ This test aims at testing the asking for help functions of the Serval Software, using 1 Android smartphone with no particular specifics, in the city - in a hilly place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in the city - in a hilly place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 1 Android smartphone.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A2-E3-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A2-E3-M1-D1y
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with no particular specifics, in A clear and flat place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in A clear and flat place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A2-E3-M1-Dn}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A2-E3-M1-Dn
+ This test aims at testing the asking for help functions of the Serval Software, using 1 Android smartphone with no particular specifics, in A clear and hilly place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in A clear and hilly place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 1 Android smartphone.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A2-E4-M1-D1y}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A2-E4-M1-D1y
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with no particular specifics, in the city - in a flat place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in the city - in a flat place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T1-A2-E4-M1-Dn}
+\begin{itshape}
+As part of the T1 category, this tests aims at testing scenarii, taking into account the landscape. 
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T1-A2-E4-M1-Dn
+ This test aims at testing the asking for help functions of the Serval Software, using 1 Android smartphone with no particular specifics, in the city - in a hilly place.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in the city - in a hilly place.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 1 Android smartphone.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\chapter{Category 2}
+\section{Test ID : T2-A1a-E- M1-D1y}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A1a-E- M1-D1y
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A1a-E- M1-D1y-D2y}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A1a-E- M1-D1y-D2y
+ This test aims at testing the calling functions of the Serval Software, using 1 Android smartphone and 1 iPhone with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone and 1 iPhone ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone and 1 iPhone to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 1 Android smartphone and 1 iPhone.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A1a-E- M1-D2y-D1y}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A1a-E- M1-D2y-D1y
+ This test aims at testing the calling functions of the Serval Software, using 1 Android smartphone and 1 iPhone with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone and 1 iPhone ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone and 1 iPhone to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 1 Android smartphone and 1 iPhone.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A1a-E- M1-D2y}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A1a-E- M1-D2y
+ This test aims at testing the calling functions of the Serval Software, using 2 iPhones with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 iPhones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 iPhones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 iPhones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A1b-E- M1-D1y}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A1b-E- M1-D1y
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A1b-E- M1-D1y-D2y}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A1b-E- M1-D1y-D2y
+ This test aims at testing the texting functions of the Serval Software, using 1 Android smartphone and 1 iPhone with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone and 1 iPhone ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone and 1 iPhone to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 1 Android smartphone and 1 iPhone.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A1b-E- M1-D2y-D1y}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A1b-E- M1-D2y-D1y
+ This test aims at testing the texting functions of the Serval Software, using 1 Android smartphone and 1 iPhone with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone and 1 iPhone ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone and 1 iPhone to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 1 Android smartphone and 1 iPhone.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A1b-E- M1-D2y}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A1b-E- M1-D2y
+ This test aims at testing the texting functions of the Serval Software, using 2 iPhones with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 iPhones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 iPhones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 iPhones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A1c-E- M1-D1y}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A1c-E- M1-D1y
+ This test aims at testing the sending an update functions of the Serval Software, using 2 Android smartphones with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A1c-E- M1-D1y-D2y}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A1c-E- M1-D1y-D2y
+ This test aims at testing the sending an update functions of the Serval Software, using 1 Android smartphone and 1 iPhone with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone and 1 iPhone ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone and 1 iPhone to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 1 Android smartphone and 1 iPhone.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A1c-E- M1-D2y-D1y}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A1c-E- M1-D2y-D1y
+ This test aims at testing the sending an update functions of the Serval Software, using 1 Android smartphone and 1 iPhone with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone and 1 iPhone ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone and 1 iPhone to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 1 Android smartphone and 1 iPhone.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A1c-E- M1-D2y}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A1c-E- M1-D2y
+ This test aims at testing the sending an update functions of the Serval Software, using 2 iPhones with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 iPhones ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 iPhones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 iPhones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A2-E- M1-D1y}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A2-E- M1-D1y
+ This test aims at testing the asking for help functions of the Serval Software, using 1 Android smartphone with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 1 Android smartphone.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A2-E- M1-D1n}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A2-E- M1-D1n
+ This test aims at testing the asking for help functions of the Serval Software, using 1 Android smartphone with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 1 Android smartphone.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A2-E- M1-D2y}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A2-E- M1-D2y
+ This test aims at testing the asking for help functions of the Serval Software, using 1 iPhone with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 iPhone ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 iPhone to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 1 iPhone.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A2-E- M1-D2n}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A2-E- M1-D2n
+ This test aims at testing the asking for help functions of the Serval Software, using 1 iPhone with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 iPhone ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 iPhone to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 1 iPhone.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A2-E- M1-D3n}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A2-E- M1-D3n
+ This test aims at testing the asking for help functions of the Serval Software, using 1 Windows Phone with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Windows Phone ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Windows Phone to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 1 Windows Phone.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A2-E- M1-D4n}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A2-E- M1-D4n
+ This test aims at testing the asking for help functions of the Serval Software, using 1 Blackberry with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Blackberry ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Blackberry to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 1 Blackberry.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A2-E- M1-D5n}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A2-E- M1-D5n
+ This test aims at testing the asking for help functions of the Serval Software, using 1 iMac with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 iMac ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 iMac to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 1 iMac.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A2-E- M1-D6n}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A2-E- M1-D6n
+ This test aims at testing the asking for help functions of the Serval Software, using 1Windows laptop with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1Windows laptop ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1Windows laptop to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 1Windows laptop.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T2-A2-E- M1-D7n}
+\begin{itshape}
+As part of the T2 category, this tests aims at testing device platforms such as Android, iOS, Windows and so forth.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T2-A2-E- M1-D7n
+ This test aims at testing the asking for help functions of the Serval Software, using 1 Linux laptop with no particular specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Linux laptop ;
+\item no particular specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Linux laptop to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 1 Linux laptop.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\chapter{Category 3}
+\section{Test ID : T3-A1a-E-M2-D1y-R1}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1a-E-M2-D1y-R1
+ This test aims at testing the calling functions of the Serval Software, using 2 Android sph with Within WiFi range (MEs)  specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android sph ;
+\item Within WiFi range (MEs)  specifics;
+\item several mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android sph to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android sph.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1a-E-M1-D1y-R2}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1a-E-M1-D1y-R2
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with Within WiFi range specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Within WiFi range specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1a-E-M1-D1y-R3}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1a-E-M1-D1y-R3
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with Limit of WiFi range specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Limit of WiFi range specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1a-E-M1-D1y-R4}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1a-E-M1-D1y-R4
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with Moving out of WiFi range specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Moving out of WiFi range specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1b-E-M2-D1y-R1}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1b-E-M2-D1y-R1
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with Within WiFi range (MEs)  specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Within WiFi range (MEs)  specifics;
+\item several mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1b-E-M1-D1y-R2}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1b-E-M1-D1y-R2
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with Within WiFi range specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Within WiFi range specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1b-E-M1-D1y-R3}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1b-E-M1-D1y-R3
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with Limit of WiFi range specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Limit of WiFi range specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1b-E-M1-D1y-R4}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1b-E-M1-D1y-R4
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with Moving out of WiFi range specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Moving out of WiFi range specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1c-E-M2-D1y-R1}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1c-E-M2-D1y-R1
+ This test aims at testing the sending an update functions of the Serval Software, using 2 Android smartphones with Within WiFi range (MEs)  specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Within WiFi range (MEs)  specifics;
+\item several mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1c-E-M1-D1y-R2}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1c-E-M1-D1y-R2
+ This test aims at testing the sending an update functions of the Serval Software, using 2 Android smartphones with Within WiFi range specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Within WiFi range specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1c-E-M1-D1y-R3}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1c-E-M1-D1y-R3
+ This test aims at testing the sending an update functions of the Serval Software, using 2 Android smartphones with Limit of WiFi range specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Limit of WiFi range specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1c-E-M1-D1y-R4}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1c-E-M1-D1y-R4
+ This test aims at testing the sending an update functions of the Serval Software, using 2 Android smartphones with Moving out of WiFi range specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Moving out of WiFi range specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M2-D1y-R1}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M2-D1y-R1
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with Within WiFi range (MEs)  specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Within WiFi range (MEs)  specifics;
+\item several mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M2-D1n-R1}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M2-D1n-R1
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with Within WiFi range (MEs)  specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Within WiFi range (MEs)  specifics;
+\item several mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1y-R2}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1y-R2
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with Within WiFi range specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Within WiFi range specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1n-R2}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1n-R2
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with Within WiFi range specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Within WiFi range specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1n-R3}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1n-R3
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with Limit of WiFi range specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Limit of WiFi range specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1y-R3}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1y-R3
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with Limit of WiFi range specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Limit of WiFi range specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1n-R4}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1n-R4
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with Moving out of WiFi range specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Moving out of WiFi range specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1y-R4}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1y-R4
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with Moving out of WiFi range specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Moving out of WiFi range specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1a-E-M1-D1y-R-P1}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1a-E-M1-D1y-R-P1
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with ME reboot specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME reboot specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1a-E-M1-D1y-R-P2}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1a-E-M1-D1y-R-P2
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with ME update specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME update specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1a-E-M1-D1y-R-P3}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1a-E-M1-D1y-R-P3
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with ME out of ressources specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME out of ressources specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1a-E-M1-D1y-R-P4}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1a-E-M1-D1y-R-P4
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with Low battery device specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Low battery device specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1a-E-M1-D1y-R-P5}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1a-E-M1-D1y-R-P5
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with Low battery ME specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Low battery ME specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1b-E-M1-D1y-R-P1}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1b-E-M1-D1y-R-P1
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with ME reboot specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME reboot specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1b-E-M1-D1y-R-P2}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1b-E-M1-D1y-R-P2
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with ME update specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME update specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1b-E-M1-D1y-R-P3}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1b-E-M1-D1y-R-P3
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with ME out of ressources specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME out of ressources specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1b-E-M1-D1y-R-P4}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1b-E-M1-D1y-R-P4
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with Low battery device specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Low battery device specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1b-E-M1-D1y-R-P5}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1b-E-M1-D1y-R-P5
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with Low battery ME specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Low battery ME specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1c-E-M1-D1y-R-P1}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1c-E-M1-D1y-R-P1
+ This test aims at testing the sending an update functions of the Serval Software, using 2 Android smartphones with ME reboot specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME reboot specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1c-E-M1-D1y-R-P2}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1c-E-M1-D1y-R-P2
+ This test aims at testing the sending an update functions of the Serval Software, using 2 Android smartphones with ME update specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME update specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1c-E-M1-D1y-R-P3}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1c-E-M1-D1y-R-P3
+ This test aims at testing the sending an update functions of the Serval Software, using 2 Android smartphones with ME out of ressources specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME out of ressources specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1c-E-M1-D1y-R-P4}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1c-E-M1-D1y-R-P4
+ This test aims at testing the sending an update functions of the Serval Software, using 2 Android smartphones with Low battery device specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Low battery device specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A1c-E-M1-D1y-R-P5}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A1c-E-M1-D1y-R-P5
+ This test aims at testing the sending an update functions of the Serval Software, using 2 Android smartphones with Low battery ME specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Low battery ME specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1y-R-P1}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1y-R-P1
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with ME reboot specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME reboot specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1n-R-P1}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1n-R-P1
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with ME reboot specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME reboot specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1y-R-P2}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1y-R-P2
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with ME update specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME update specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1n-R-P2}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1n-R-P2
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with ME update specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME update specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1y-R-P3}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1y-R-P3
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with ME out of ressources specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME out of ressources specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1n-R-P3}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1n-R-P3
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with ME out of ressources specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME out of ressources specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1y-R-P4}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1y-R-P4
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with Low battery device specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Low battery device specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1n-R-P4}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1n-R-P4
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with Low battery device specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Low battery device specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1y-R-P5}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1y-R-P5
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with Low battery ME specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Low battery ME specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T3-A2-E-M1-D1n-R-P5}
+\begin{itshape}
+As part of the T3 category, this tests aims at testing connetivity, taking Wi-Fi range into account.
+To realise this test, you must be able to follow the general testing recommandations.
+\end{itshape}
+\newline
+Test ID : T3-A2-E-M1-D1n-R-P5
+ This test aims at testing the asking for help functions of the Serval Software, using 2 Android smartphones with Low battery ME specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item Low battery ME specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A asks for help.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Help desk receives msg and answers 
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\chapter{Category 4}
+\section{Test ID : T4-A3-E-M1-D}
+\begin{itshape}
+As part of the T4 category, this tests aims at testing potential improvements.
+To realise this test, you must be able to follow the general testing recommandations. 
+\end{itshape}
+\newline
+Test ID : T4-A3-E-M1-D
+ This test aims at testing the downloading the app functions of the Serval Software, using 2 Android smartphones with  specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item  specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item If a browser didn't open automatically, open one.
+\item A downloads App.
+\end{itemize}
+Once you have noted the results, close the browser and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Download and installation proceed
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T4-I1-A1a-E-M1-D1y}
+\begin{itshape}
+As part of the T4 category, this tests aims at testing potential improvements.
+To realise this test, you must be able to follow the general testing recommandations. 
+\end{itshape}
+\newline
+Test ID : T4-I1-A1a-E-M1-D1y
+ This test aims at testing the calling functions of the Serval Software, using 1 Android smartphone with  specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone ;
+\item  specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls ME.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 1 Android smartphone.
+\subsection{Expected results} The expected results are Message “impossible”
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T4-I1-A1b-E-M1-D1y}
+\begin{itshape}
+As part of the T4 category, this tests aims at testing potential improvements.
+To realise this test, you must be able to follow the general testing recommandations. 
+\end{itshape}
+\newline
+Test ID : T4-I1-A1b-E-M1-D1y
+ This test aims at testing the calling functions of the Serval Software, using 1 Android smartphone with  specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone ;
+\item  specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts ME.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 1 Android smartphone.
+\subsection{Expected results} The expected results are Message “impossible”
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T4-I1-A1c-E-M1-D1y}
+\begin{itshape}
+As part of the T4 category, this tests aims at testing potential improvements.
+To realise this test, you must be able to follow the general testing recommandations. 
+\end{itshape}
+\newline
+Test ID : T4-I1-A1c-E-M1-D1y
+ This test aims at testing the sending an update functions of the Serval Software, using 1 Android smartphone with  specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone ;
+\item  specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 1 Android smartphone.
+\subsection{Expected results} The expected results are Message “impossible”
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T4-I2-A1a-E-M1-D1y}
+\begin{itshape}
+As part of the T4 category, this tests aims at testing potential improvements.
+To realise this test, you must be able to follow the general testing recommandations. 
+\end{itshape}
+\newline
+Test ID : T4-I2-A1a-E-M1-D1y
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with ME reboot specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME reboot specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Call stops / on hold ?
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T4-I2-A1a-E-M2-D1y}
+\begin{itshape}
+As part of the T4 category, this tests aims at testing potential improvements.
+To realise this test, you must be able to follow the general testing recommandations. 
+\end{itshape}
+\newline
+Test ID : T4-I2-A1a-E-M2-D1y
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with ME reboot specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item ME reboot specifics;
+\item 2 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Call continues
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T4-I3-A1a-E-M1-D1y}
+\begin{itshape}
+As part of the T4 category, this tests aims at testing potential improvements.
+To realise this test, you must be able to follow the general testing recommandations. 
+\end{itshape}
+\newline
+Test ID : T4-I3-A1a-E-M1-D1y
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with different Android versions specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item different Android versions specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T4-I3-A1b-E-M1-D1y}
+\begin{itshape}
+As part of the T4 category, this tests aims at testing potential improvements.
+To realise this test, you must be able to follow the general testing recommandations. 
+\end{itshape}
+\newline
+Test ID : T4-I3-A1b-E-M1-D1y
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with different Android versions specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item different Android versions specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T4-I3-A1c-E-M1-D1y}
+\begin{itshape}
+As part of the T4 category, this tests aims at testing potential improvements.
+To realise this test, you must be able to follow the general testing recommandations. 
+\end{itshape}
+\newline
+Test ID : T4-I3-A1c-E-M1-D1y
+ This test aims at testing the sending an update functions of the Serval Software, using 2 Android smartphones with different Android versions specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item different Android versions specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A sends an update.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T4-I4-A1a-E-M1-D1y}
+\begin{itshape}
+As part of the T4 category, this tests aims at testing potential improvements.
+To realise this test, you must be able to follow the general testing recommandations. 
+\end{itshape}
+\newline
+Test ID : T4-I4-A1a-E-M1-D1y
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with different Android versions specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item different Android versions specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are A device ringing and B receives call
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T4-I4-A1b-E-M1-D1y}
+\begin{itshape}
+As part of the T4 category, this tests aims at testing potential improvements.
+To realise this test, you must be able to follow the general testing recommandations. 
+\end{itshape}
+\newline
+Test ID : T4-I4-A1b-E-M1-D1y
+ This test aims at testing the texting functions of the Serval Software, using 2 Android smartphones with different Android versions specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item different Android versions specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A texts B.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are Text sent and B receives text
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T4-I4-A1c-E-M1-D1y}
+\begin{itshape}
+As part of the T4 category, this tests aims at testing potential improvements.
+To realise this test, you must be able to follow the general testing recommandations. 
+\end{itshape}
+\newline
+Test ID : T4-I4-A1c-E-M1-D1y
+ This test aims at testing the calling functions of the Serval Software, using 2 Android smartphones with different Android versions specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 2 Android smartphones ;
+\item different Android versions specifics;
+\item 1 mesh extender(s);
+\item 2 persons
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 2 Android smartphones to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A calls B .
+\end{itemize}
+Once you have noted the results, close the app and switch off the 2 Android smartphones.
+\subsection{Expected results} The expected results are B sees the update
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\section{Test ID : T4-I5-A1a-E-M1-D1y}
+\begin{itshape}
+As part of the T4 category, this tests aims at testing potential improvements.
+To realise this test, you must be able to follow the general testing recommandations. 
+\end{itshape}
+\newline
+Test ID : T4-I5-A1a-E-M1-D1y
+ This test aims at testing the opening the app functions of the Serval Software, using 1 Android smartphone with Old Serval App version specifics, in no particular location.
+\subsection{Equipment needed} To realise this test, you will need:
+\begin{itemize}
+\item 1 Android smartphone ;
+\item Old Serval App version specifics;
+\item 1 mesh extender(s);
+\item 1 person
+\end{itemize}
+This test should be realised in no particular location.
+\subsection{Operational mode} \begin{itemize}
+\item Put the Mesh Extender at the defined spot.
+\item Turn on the ME.
+\item Connect the 1 Android smartphone to the \emph{public.servalproject.org} Wi-Fi network.
+\item Open the App.
+\item Connect to a ME.
+\item A opens app.
+\end{itemize}
+Once you have noted the results, close the app and switch off the 1 Android smartphone.
+\subsection{Expected results} The expected results are Verif of App version - redirection to captive portal - download and installation proceed of new version
+\newline\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{2.5}
+\centering
+\begin{tabular}{|M{4cm} M{4.8cm} M{4.8cm}|}
+
+\hline
+Check ? & $\Box$ Yes & $\Box$ No\\ 
+\hline 
+\end{tabular}
+\newline
+\newline
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\centering
+\begin{tabular}{|M{4cm}|M{10cm}|}
+
+
+\hline
+Latency & \\[50pt] 
+\hline 
+Range & \\[50pt] 
+\hline 
+
+Battery Life & \\[50pt] 
+\hline 
+Remarks & \\[50pt] 
+\hline 
+Improvements & \\[50pt] 
+\hline 
+\end{tabular}
+\newpage
+\chapter{Bibliography}\appendix \end{document}
